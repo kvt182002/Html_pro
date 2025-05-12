@@ -1,0 +1,332 @@
+/*=========== TABLE OF CONTENTS ===========
+1. CSS Variables
+2. Common CSS
+==========================================*/
+
+/*-------------------------------------
+  1. CSS Variables
+--------------------------------------*/
+:root {
+  /*------Color variables------*/
+  --amber_500: #ffc107;
+  --black_900: #000000;
+  --blue_700: #1976d2;
+  --blue_gray_400: #868686;
+  --blue_gray_900: #263238;
+  --deep_orange_400: #ed893e;
+  --deep_orange_a100: #ffb573;
+  --deep_orange_a400: #ff3d00;
+  --gray_100: #f5f5f5;
+  --gray_100_01: #f2fcf4;
+  --gray_100_02: #f3f3f3;
+  --gray_100_66: #f3f3f366;
+  --gray_200: #ebebeb;
+  --gray_200_01: #f0f0f0;
+  --gray_300: #e3e4e8;
+  --gray_300_01: #e6e6e6;
+  --gray_300_02: #e0e0e0;
+  --gray_300_03: #e4e4e4;
+  --gray_50: #fafafa;
+  --gray_500: #929292;
+  --gray_500_01: #9b9b9b;
+  --gray_500_02: #a2a2a2;
+  --gray_700: #555555;
+  --green_200: #a4e0a4;
+  --green_300: #74ca82;
+  --green_400: #60c370;
+  --green_500: #4caf50;
+  --lime_400: #e3d662;
+  --lime_700: #bcb04b;
+  --white_a700: #ffffff;
+  --white_a700_42: #ffffff42;
+
+  /*------Border radius variables------*/
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-5xl: 20px;
+  --radius-6xl: 24px;
+
+  /*------Spacing variables------*/
+  --space-lg: 8px;
+  --space-xl: 10px;
+  --space-2xl: 12px;
+  --space-3xl: 14px;
+  --space-4xl: 16px;
+  --space-5xl: 20px;
+  --space-6xl: 24px;
+  --space-10xl: 44px;
+  --space-11xl: 54px;
+  --space-12xl: 68px;
+  --space-15xl: 98px;
+}
+
+/*-------------------------------------
+  2. Common CSS
+--------------------------------------*/
+.log-in {
+  background-color: var(--white_a700);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rowheaderlogo {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--space-5xl);
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.headerlogo_one {
+  height: 54px;
+  align-self: center;
+  width: 212px;
+  object-fit: contain;
+}
+
+.rowexplore {
+  color: var(--green_400);
+  margin-bottom: 14px !important;
+  font-size: 18px;
+  font-weight: 600;
+  gap: var(--space-12xl);
+  display: flex;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 1050px) {
+    gap: var(--space-5xl);
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.explore_one {
+  color: var(--green_400) !important;
+}
+
+.rowvector_one {
+  width: 22%;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-5xl);
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.vector_one {
+  height: 50px;
+  padding-left: var(--space-2xl);
+  padding-right: var(--space-2xl);
+  background-color: var(--green_400) !important;
+  width: 50px;
+  border-radius: 24px !important;
+}
+
+.image_two {
+  height: 50px;
+  width: 50px;
+}
+
+.linefourteen {
+  height: 0.5px;
+  background-color: var(--green_400);
+}
+
+.welcomeback_one {
+  color: var(--black_900) !important;
+}
+
+.row_one {
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  @media only screen and (max-width: 1050px) {
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.column {
+  gap: var(--space-11xl);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  @media only screen and (max-width: 550px) {
+    gap: 27px;
+  }
+}
+
+.rowfooterlogo {
+  margin-right: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-5xl);
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    margin-right: 0px;
+  }
+}
+
+.columnfooterlog {
+  gap: 40px;
+  align-self: center;
+  display: flex;
+  width: 36%;
+  flex-direction: column;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.footerlogo_one {
+  height: 54px;
+  width: 208px;
+  object-fit: contain;
+}
+
+.stackemail {
+  height: 50px;
+  position: relative;
+  align-content: center;
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
+}
+
+.email_one {
+  height: 50px;
+  color: var(--white_a700) !important;
+  padding-left: var(--space-4xl);
+  padding-right: var(--space-4xl);
+  font-size: 12px;
+  background-color: var(--white_a700_42) !important;
+  flex-grow: 1;
+  border-radius: 4px !important;
+}
+
+.get_started {
+  color: var(--gray_700) !important;
+  padding-left: var(--space-4xl);
+  padding-right: var(--space-4xl);
+  font-size: 14px;
+  font-weight: 600;
+  background-color: var(--white_a700) !important;
+  height: max-content;
+  min-width: 116px;
+  position: absolute;
+  right: 5px;
+  bottom: 0px;
+  top: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 4px !important;
+}
+
+.rowroundicons {
+  gap: var(--space-3xl);
+  display: flex;
+}
+
+.roundicons_one {
+  height: 40px;
+  padding-left: var(--space-2xl);
+  padding-right: var(--space-2xl);
+  background-color: var(--gray_100_02) !important;
+  width: 40px;
+  border-radius: 20px !important;
+}
+
+.roundicons {
+  height: 40px;
+  padding-left: var(--space-xl);
+  padding-right: var(--space-xl);
+  background-color: var(--gray_100_66) !important;
+  width: 40px;
+  border-radius: 20px !important;
+}
+
+.rowcompany_one {
+  width: 32%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-5xl);
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.columncompany {
+  gap: var(--space-2xl);
+  align-self: center;
+  display: flex;
+  width: 54%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.columncontact {
+  gap: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.columninformati {
+  gap: var(--space-4xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.columndownloada {
+  gap: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.downloadapp_one {
+  font-weight: 600 !important;
+}
+
+.bgstroke_one {
+  height: 48px;
+  width: 162px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.bgstroke_three {
+  height: 48px;
+  width: 164px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.rowcopyright202 {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-5xl);
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+}
+
+.rowtermsof {
+  gap: var(--space-6xl);
+  display: flex;
+  flex-wrap: wrap;
+}
