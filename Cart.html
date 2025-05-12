@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ankit&#39;s Application42</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <img
+      alt="Logo"
+      src="https://appproject.dhiwise.com/dhiwise-logo.png?c=&v="
+      style="width: 0px; height: 0px; display: none"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/font.css" />
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/components.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Cart.css" />
+    <script>
+      /**
+       * Handles the value change functionality in a quantity input
+       */
+      function handleQuantityInput(/** @type {HTMLElement} */ target) {
+        const fieldElement = /** @type {HTMLElement[]} */ target.querySelector(`[quantity-for="${target.id}"]`);
+        const stepUpButton = /** @type {HTMLElement[]} */ target.querySelector(`[quantity-increase]`);
+        const stepDownButton = /** @type {HTMLElement[]} */ target.querySelector(`[quantity-decrease]`);
+
+        const fieldElementIsInput = fieldElement instanceof HTMLInputElement;
+        const fieldElementIsNumberInput = fieldElementIsInput && fieldElement.type === "number";
+
+        function setNumberValue(/** @type {number} */ n = 0) {
+          if (fieldElementIsNumberInput) return;
+          if (fieldElementIsInput) {
+            fieldElement.value = n;
+          } else if (fieldElement) {
+            fieldElement.innerHTML = n;
+          }
+        }
+
+        const input =
+          fieldElement instanceof HTMLInputElement && fieldElement.type === "number"
+            ? fieldElement
+            : (() => {
+                const element = document.createElement("input");
+                element.type = "number";
+                element.min = 0;
+                element.step = 1;
+                element.value = 1;
+                element.hidden = true;
+                return element;
+              })();
+
+        setNumberValue(1);
+        stepUpButton?.addEventListener("click", (/** @type {MouseEvent} */ event) => {
+          input.stepUp();
+          setNumberValue(input.valueAsNumber);
+        });
+        stepDownButton?.addEventListener("click", (/** @type {MouseEvent} */ event) => {
+          input.stepDown();
+          setNumberValue(input.valueAsNumber);
+        });
+      }
+      /**
+       * Hydrate quantity inputs(s)
+       */
+      document.addEventListener("DOMContentLoaded", () => {
+        const elements = /** @type {NodeListOf<HTMLElement>} */ (document.querySelectorAll("[quantity-input]"));
+        for (const element of elements) handleQuantityInput(element);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="log-in">
+      <div class="columnheaderlog">
+        <header class="headerheaderlog-1">
+          <div class="rowheaderlogo">
+            <img src="public/images/img_header_logo.png" alt="Headerlogo" class="headerlogo_one" />
+            <ul class="rowexplore">
+              <li>
+                <a href="#">
+                  <p class="explore_one ui heading size-heading3xl">EXPLORE</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="explore_one ui heading size-heading3xl">ABOUT</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <p class="explore_one ui heading size-heading3xl">HELP</p>
+                </a>
+              </li>
+            </ul>
+            <div class="rowvector_one">
+              <a href="#">
+                <button class="vector_one ui button size-2xl fill">
+                  <img src="public/images/img_vector_white_a700.svg" />
+                </button>
+              </a>
+              <a href="#">
+                <img src="public/images/img_group_2669.svg" alt="Image" class="image_two" />
+              </a>
+              <a href="#">
+                <img src="public/images/img_group_2670.svg" alt="Image" class="image_two" />
+              </a>
+            </div>
+          </div>
+          <div class="linefourteen"></div>
+        </header>
+        <div class="rowmycart">
+          <h1 class="mycart_one ui heading size-heading6xl">My Cart</h1>
+        </div>
+      </div>
+      <div class="column-1 container-sm">
+        <div>
+          <div>
+            <div class="rowshipment1ofo">
+              <p class="shipment1ofone ui text size-text5xl">Shipment 1 of 1</p>
+              <h2 class="itemsthree_one ui heading size-heading5xl">( Items 3 )</h2>
+            </div>
+            <div class="rowtime">
+              <p class="shipment1ofone ui text size-text5xl">Delivery Time : Tomorrow, 7 AM - 9 PM</p>
+              <button class="change_slot ui button size-xl fill round">Change Slot</button>
+            </div>
+            <div class="listroyalkashmi">
+              <div class="rowlinetwentyfi container-xs">
+                <div class="columnvector">
+                  <div class="row-5">
+                    <div class="rowroyalkashmir">
+                      <img src="public/images/img_image_59.png" alt="Image" class="image" />
+                      <div class="columnroyalkash">
+                        <h3 class="itemsthree_one ui heading size-heading5xl">Royal Kashmiri Apple</h3>
+                        <div class="row3pcs500600">
+                          <div class="columnbilldetai">
+                            <p class="class-3pcs500600 ui text size-text4xl">3 pcs (500-600 gm)</p>
+                            <p class="class-3pcs500600_one ui text size-text4xl">3 pcs (500-600 gm)</p>
+                          </div>
+                        </div>
+                        <div class="rowmrp">
+                          <p class="shipment1ofone ui text size-text5xl">MRP :</p>
+                          <p class="shipment1ofone ui text size-text5xl">$3.99</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div quantity-input id="108:24339" class="rowvector_one-2">
+                      <div quantity-decrease class="stackvector_one">
+                        <img src="public/images/img_vector_green_400.svg" alt="Image" class="image_one-2" />
+                        <div class="vector_one-2"></div>
+                      </div>
+                      <h4 class="one ui heading size-heading6xl" quantity-for="108:24339">1</h4>
+                      <div quantity-increase class="column-3">
+                        <img src="public/images/img_vector.svg" alt="Image" class="image_two-2" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="linetwentyeight"></div>
+                </div>
+              </div>
+              <div class="line-26"></div>
+              <div class="rowlinetwentyfi container-xs">
+                <div class="columnvector">
+                  <div class="row-5"></div>
+                  <div class="linetwentyeight"></div>
+                </div>
+              </div>
+              <div class="line-26"></div>
+              <div class="rowlinetwentyfi container-xs">
+                <div class="columnvector">
+                  <div class="row-5">
+                    <div class="rowroyalkashmir">
+                      <img src="public/images/img_image_59.png" alt="Image" class="image" />
+                      <div class="columnroyalkash">
+                        <h6 class="itemsthree_one ui heading size-heading5xl">Royal Kashmiri Apple</h6>
+                        <div class="row3pcs500600">
+                          <div class="columnbilldetai">
+                            <p class="class-3pcs500600 ui text size-text4xl">3 pcs (500-600 gm)</p>
+                            <p class="class-3pcs500600_one ui text size-text4xl">3 pcs (500-600 gm)</p>
+                          </div>
+                        </div>
+                        <div class="rowmrp">
+                          <p class="shipment1ofone ui text size-text5xl">MRP :</p>
+                          <p class="shipment1ofone ui text size-text5xl">$3.99</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div quantity-input id="108:24339Dhi" class="rowvector_one-2">
+                      <div quantity-decrease class="stackvector_one">
+                        <img src="public/images/img_vector_green_400.svg" alt="Image" class="image_one-2" />
+                        <div class="vector_one-2"></div>
+                      </div>
+                      <h4 class="one ui heading size-heading6xl" quantity-for="108:24339Dhi">1</h4>
+                      <div quantity-increase class="column-4">
+                        <img src="public/images/img_vector.svg" alt="Image" class="image_two-2" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="linetwentyeight"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columnlinetwent">
+          <div class="linetwentyseven"></div>
+          <div class="list50off_one">
+            <div class="stack50off_one">
+              <img src="public/images/img_group.svg" alt="50off" class="class-50off_one" />
+              <div class="row-1">
+                <div class="rowflat_one">
+                  <div class="columnflat_one">
+                    <img src="public/images/img_path_147.svg" alt="Flat" class="flat_one" />
+                    <img src="public/images/img_path_147.svg" alt="On Your First" class="flat_one" />
+                  </div>
+                  <div class="columnflat_two">
+                    <h2 class="flat_two ui heading size-heading5xl">FLAT</h2>
+                    <h3 class="offer ui heading size-heading6xl">50% off</h3>
+                    <p class="onyourfirst ui text size-text3xl">on your first order</p>
+                    <p class="usecouponcode ui text size-text3xl">Use coupon code to get OFFER</p>
+                  </div>
+                  <div class="columnflat_one">
+                    <img src="public/images/img_path_147.svg" alt="Flat" class="flat_one" />
+                    <img src="public/images/img_path_147.svg" alt="On Your First" class="flat_one" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stack50off_one-1">
+              <img src="public/images/img_group.svg" alt="50off" class="class-50off_one" />
+              <div class="row-1">
+                <div class="rowflat_one">
+                  <div class="columnflat_one">
+                    <img src="public/images/img_path_147.svg" alt="Flat" class="flat_one" />
+                    <img src="public/images/img_path_147.svg" alt="On Your First" class="flat_one" />
+                  </div>
+                  <div class="columnflat_two">
+                    <h4 class="flat_two ui heading size-heading5xl">FLAT</h4>
+                    <h5 class="offer ui heading size-heading6xl">50% off</h5>
+                    <p class="onyourfirst ui text size-text3xl">on your first order</p>
+                    <p class="usecouponcode ui text size-text3xl">Use coupon code to get OFFER</p>
+                  </div>
+                  <div class="columnflat_four-1">
+                    <img src="public/images/img_path_147.svg" alt="Flat" class="flat_one" />
+                    <img src="public/images/img_path_147.svg" alt="On Your First" class="flat_one" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="stack50off_one-2">
+              <img src="public/images/img_group.svg" alt="50off" class="class-50off_one" />
+              <div class="row-1">
+                <div class="rowflat_one">
+                  <div class="columnflat_one">
+                    <img src="public/images/img_path_147_lime_700.svg" alt="Flat" class="flat_one" />
+                    <img src="public/images/img_path_147_lime_700.svg" alt="On Your First" class="flat_one" />
+                  </div>
+                  <div class="columnflat_two">
+                    <h6 class="flat_two ui heading size-heading5xl">FLAT</h6>
+                    <h4 class="offer ui heading size-heading6xl">50% off</h4>
+                    <p class="onyourfirst ui text size-text3xl">on your first order</p>
+                    <p class="usecouponcode ui text size-text3xl">Use coupon code to get OFFER</p>
+                  </div>
+                  <div class="columnflat_four-1">
+                    <img src="public/images/img_path_147.svg" alt="Flat" class="flat_one" />
+                    <img src="public/images/img_path_147.svg" alt="On Your First" class="flat_one" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="columnbilldetai">
+            <h2 class="billdetails_one ui heading size-heading6xl">Bill Details</h2>
+            <div class="rowmrp_one">
+              <div class="columnmrp_one">
+                <div class="row-4">
+                  <p class="welcomeback_one ui text size-text5xl">MRP</p>
+                  <p class="welcomeback_one ui text size-text5xl">$9.97</p>
+                </div>
+                <div class="linetwentyeight"></div>
+              </div>
+            </div>
+            <div class="rowproduct">
+              <p class="welcomeback_one ui text size-text5xl">Product Discount</p>
+              <p class="welcomeback_one ui text size-text5xl">$0.00</p>
+            </div>
+            <div class="rowlinetwentyni">
+              <div class="columnmrp_one">
+                <div class="linetwentyeight"></div>
+                <div class="rowdelivery">
+                  <p class="welcomeback_one ui text size-text5xl">Delivery Charges</p>
+                  <p class="welcomeback_one ui text size-text5xl">$0.00</p>
+                </div>
+                <div class="linetwentyeight"></div>
+              </div>
+            </div>
+            <div class="rowtotal">
+              <h3 class="total_one ui heading size-heading6xl">Total</h3>
+              <h4 class="price_three ui heading size-heading6xl">$9.97</h4>
+            </div>
+            <div class="rowpromo_code">
+              <button class="promo_code_can ui button size-4xl outline undefined_undefined undefined_undefined_border">
+                Promo code can be applied on payment screen
+              </button>
+              <button class="checkout ui button size-3xl fill round">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footerfooterlog-1">
+        <div class="row_one container-sm">
+          <div class="column">
+            <div class="rowfooterlogo">
+              <div class="columnfooterlog">
+                <img src="public/images/img_footer_logo.png" alt="Footerlogo" class="footerlogo_one" />
+                <div class="stackemail">
+                  <label class="email_one ui input size-2xl fill round">
+                    <input name="email_one" placeholder="Enter your email" type="text" />
+                  </label>
+                  <button class="get_started ui button size-xl fill round">Get Started</button>
+                </div>
+                <div class="rowroundicons">
+                  <button class="roundicons_one ui button size-xl fill circle">
+                    <img src="public/images/img_round_icons.svg" />
+                  </button>
+                  <button class="roundicons ui button size-xl fill circle">
+                    <img src="public/images/img_round_icons_green_400.svg" />
+                  </button>
+                  <button class="roundicons ui button size-xl fill circle">
+                    <img src="public/images/img_round_icons_green_400_40x40.svg" />
+                  </button>
+                  <button class="roundicons ui button size-xl fill circle">
+                    <img src="public/images/img_round_icons_40x40.svg" />
+                  </button>
+                  <button class="roundicons ui button size-xl fill circle">
+                    <img src="public/images/img_round_icons_1.svg" />
+                  </button>
+                </div>
+              </div>
+              <div class="rowcompany_one">
+                <div class="columncompany">
+                  <h5 class="ui heading size-heading5xl">Company</h5>
+                  <ul class="columninformati">
+                    <li>
+                      <a href="Information" target="_blank" rel="noreferrer">
+                        <p class="ui text size-textxl">Information</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="Blog" target="_blank" rel="noreferrer">
+                        <p class="ui text size-textxl">Blog</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="Careers" target="_blank" rel="noreferrer">
+                        <p class="ui text size-textxl">Careers</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="Partners" target="_blank" rel="noreferrer">
+                        <p class="ui text size-textxl">Partners</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="columncontact">
+                  <h5 class="ui heading size-heading5xl">Information</h5>
+                  <ul class="columninformati">
+                    <li>
+                      <a href="sggrocery@gmail.com" target="_blank" rel="noreferrer">
+                        <p class="ui text size-textxl">sggrocery@gmail.com</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p class="ui text size-textxl">+1 (773) 600-4875</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="columndownloada">
+                <h5 class="downloadapp_one ui heading size-heading5xl">Contact</h5>
+                <a href="#">
+                  <img src="public/images/img_bg_stroke.png" alt="Bgstroke" class="bgstroke_one" />
+                </a>
+                <a href="#">
+                  <img src="public/images/img_bg_stroke.png" alt="Bgstroke" class="bgstroke_three" />
+                </a>
+              </div>
+            </div>
+            <div class="rowcopyright202">
+              <p class="ui text size-textlg">Copyright 2021 SG Grocery. All Rights Reserved.</p>
+              <div class="rowtermsof">
+                <a href="#">
+                  <p class="ui text size-textlg">Terms of Service</p>
+                </a>
+                <a href="#">
+                  <p class="ui text size-textlg">Privacy Policy</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
