@@ -1,0 +1,196 @@
+/*=========== TABLE OF CONTENTS ===========
+1. Common CSS
+2. Page CSS
+==========================================*/
+
+/*-------------------------------------
+  1. Common CSS
+--------------------------------------*/
+.confirmation {
+  color: var(--gray_500_01) !important;
+}
+
+/*-------------------------------------
+  2. Page CSS
+--------------------------------------*/
+.headerheaderlog {
+  margin-top: 22px;
+  gap: var(--space-5xl);
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.row {
+  margin-top: 72px;
+  background-color: var(--gray_100_01);
+  display: flex;
+  justify-content: center;
+  padding: 72px 56px;
+  border-radius: 3px;
+  @media only screen and (max-width: 1050px) {
+    padding: var(--space-5xl);
+  }
+}
+
+.rowwelcomeback {
+  margin-bottom: 18px;
+  margin-left: 14px;
+  margin-right: 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.columnwelcomeba {
+  margin-left: 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @media only screen and (max-width: 1050px) {
+    align-self: stretch;
+    margin-left: 0px;
+  }
+}
+
+.wewouldlike_one {
+  color: var(--gray_500) !important;
+  margin-top: 20px;
+  width: 90%;
+  line-height: 139.9%;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.email {
+  color: var(--gray_500_01) !important;
+  margin-top: 24px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 18px;
+  background-color: var(--white_a700) !important;
+  width: 82%;
+  height: 64px;
+  border-radius: 3px !important;
+  @media only screen and (max-width: 550px) {
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.password {
+  color: var(--gray_500_01) !important;
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 18px;
+  background-color: var(--white_a700) !important;
+  width: 82%;
+  height: 64px;
+  border-radius: 3px !important;
+  @media only screen and (max-width: 550px) {
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.rowrememberme {
+  margin-top: 18px;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-5xl);
+}
+
+.rememberme_one {
+  color: var(--gray_500_01);
+  font-size: 14px;
+  gap: var(--space-lg);
+  display: flex;
+}
+
+.forgotpassword-link {
+  margin-right: 84px;
+}
+
+.sign_in {
+  color: var(--white_a700) !important;
+  margin-top: 44px;
+  padding-left: 34px;
+  padding-right: 34px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: var(--green_400) !important;
+  height: 52px;
+  min-width: 394px;
+  border-radius: 3px !important;
+  @media only screen and (max-width: 550px) {
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.sign_in_with {
+  color: var(--green_400) !important;
+  margin-top: 20px;
+  padding-left: var(--space-5xl);
+  padding-right: 32px;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 34px;
+  height: 52px;
+  min-width: 394px;
+  border-radius: 3px !important;
+  border: 2px solid var(--green_400) !important;
+  @media only screen and (max-width: 550px) {
+    padding-right: var(--space-5xl);
+  }
+}
+
+.flat-color-iconsgoogle {
+  height: 26px;
+  width: 26px;
+  object-fit: contain;
+}
+
+.rowconfirmation {
+  margin-top: 30px;
+  gap: 19px;
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.signup_one {
+  color: var(--green_400) !important;
+  font-weight: 700 !important;
+}
+
+.online_one {
+  height: 500px;
+  width: 500px;
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+}
+
+.footerfooterlog {
+  margin-top: 1084px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: flex;
+  background-color: var(--green_400);
+  align-self: stretch;
+  align-items: flex-end;
+  @media only screen and (max-width: 1050px) {
+    padding-top: var(--space-5xl);
+    padding-bottom: var(--space-5xl);
+  }
+}
