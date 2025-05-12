@@ -1,0 +1,594 @@
+/*=========== TABLE OF CONTENTS ===========
+1. Common CSS
+2. Page CSS
+==========================================*/
+
+/*-------------------------------------
+  1. Common CSS
+--------------------------------------*/
+.line-26 {
+  background-color: var(--gray_500_02);
+  width: 1140px;
+  height: 1px;
+}
+
+.rowlinetwentyfi {
+  flex: 1;
+  display: flex;
+  align-self: stretch;
+  @media only screen and (max-width: 1050px) {
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.columnvector {
+  gap: var(--space-10xl);
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.row-5 {
+  display: flex;
+  align-items: flex-start;
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
+}
+
+.rowroyalkashmir {
+  align-self: center;
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-5xl);
+  @media only screen and (max-width: 1050px) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+  }
+}
+
+.image {
+  height: 138px;
+  width: 30%;
+  object-fit: contain;
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
+}
+
+.columnroyalkash {
+  margin-bottom: 6px;
+  align-self: flex-end;
+  width: 56%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  @media only screen and (max-width: 550px) {
+    width: 100%;
+  }
+}
+
+.itemsthree_one {
+  color: var(--black_900) !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+}
+
+.row3pcs500600 {
+  margin-top: 18px;
+  align-self: stretch;
+  display: flex;
+}
+
+.columnbilldetai {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.class-3pcs500600 {
+  color: var(--blue_gray_400) !important;
+}
+
+.class-3pcs500600_one {
+  color: var(--blue_gray_400) !important;
+  margin-top: -28px;
+  position: relative;
+}
+
+.rowmrp {
+  margin-top: 8px;
+  gap: 13px;
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shipment1ofone {
+  color: var(--black_900) !important;
+  font-size: 22px !important;
+}
+
+.rowvector_one-2 {
+  margin-top: 26px;
+  padding-left: var(--space-12xl);
+  padding-right: 56px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  @media only screen and (max-width: 1050px) {
+    align-self: stretch;
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.stackvector_one {
+  height: 40px;
+  width: 8%;
+  position: relative;
+  align-content: center;
+  cursor: pointer;
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
+}
+
+.image_one-2 {
+  height: 3px;
+  margin: auto;
+}
+
+.vector_one-2 {
+  height: 40px;
+  background-color: var(--green_400);
+  width: 40px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  margin: auto;
+  border-radius: var(--radius-5xl);
+}
+
+.one {
+  color: var(--green_400) !important;
+  margin-left: 18px;
+}
+
+.image_two-2 {
+  height: 40px;
+}
+
+.linetwentyeight {
+  height: 1px;
+  background-color: var(--gray_500_02);
+}
+
+.class-50off_one {
+  height: 162px;
+  flex: 1;
+  width: 100%;
+}
+
+.row-1 {
+  padding-left: 18px;
+  padding-right: 18px;
+  flex: 1;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
+  height: max-content;
+  margin: auto;
+}
+
+.rowflat_one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-5xl);
+}
+
+.columnflat_one {
+  gap: var(--space-15xl);
+  display: flex;
+  flex-direction: column;
+  @media only screen and (max-width: 1050px) {
+    gap: 73px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    gap: 49px;
+  }
+}
+
+.columnflat_two {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.flat_two {
+  font-family: Helvetica !important;
+  font-size: 21.52px !important;
+}
+
+.offer {
+  font-family: Helvetica !important;
+  font-size: 30.74px !important;
+  font-weight: 700 !important;
+}
+
+.onyourfirst {
+  font-family: Helvetica !important;
+  font-size: 18.44px !important;
+}
+
+.usecouponcode {
+  margin-top: 10px;
+  font-family: Helvetica !important;
+  font-size: 18.44px !important;
+}
+
+.columnflat_four-1 {
+  gap: var(--space-15xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media only screen and (max-width: 1050px) {
+    gap: 73px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    gap: 49px;
+  }
+}
+
+.flat_one {
+  height: 16px;
+}
+
+.columnmrp_one {
+  gap: var(--space-3xl);
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------------------------------------
+  2. Page CSS
+--------------------------------------*/
+.columnheaderlog {
+  margin-top: 22px;
+  gap: 26px;
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+}
+
+.headerheaderlog-1 {
+  gap: var(--space-5xl);
+  flex-direction: column;
+  display: flex;
+}
+
+.rowmycart {
+  background-color: var(--green_400);
+  display: flex;
+  padding: 26px 56px 26px 150px;
+  @media only screen and (max-width: 1050px) {
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+
+  @media only screen and (max-width: 550px) {
+    padding: var(--space-5xl);
+  }
+}
+
+.mycart_one {
+  margin-top: 4px;
+  font-size: 28px !important;
+  @media only screen and (max-width: 1050px) {
+    font-size: 26px !important;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 24px !important;
+  }
+}
+
+.column-1 {
+  margin-top: 52px;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (max-width: 1050px) {
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.rowshipment1ofo {
+  gap: 27px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rowtime {
+  margin-top: 20px;
+  gap: 31px;
+  display: flex;
+  align-items: center;
+}
+
+.change_slot {
+  color: var(--white_a700) !important;
+  padding-left: 34px;
+  padding-right: 34px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: var(--green_400) !important;
+  height: 44px;
+  min-width: 184px;
+  border-radius: 3px !important;
+  @media only screen and (max-width: 550px) {
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.listroyalkashmi {
+  margin-top: 78px;
+  gap: 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.column-3 {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.column-4 {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.columnlinetwent {
+  gap: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.linetwentyseven {
+  height: 15px;
+  background-color: var(--gray_300_03);
+}
+
+.list50off_one {
+  display: flex;
+  @media only screen and (max-width: 1050px) {
+    flex-direction: column;
+  }
+}
+
+.stack50off_one {
+  height: 162px;
+  width: 418px;
+  position: relative;
+  align-content: center;
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
+}
+
+.stack50off_one-1 {
+  height: 162px;
+  background-image: url(../public/images/img_group_green_400.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 418px;
+  position: relative;
+  align-content: center;
+  padding: var(--space-3xl) 18px;
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
+}
+
+.stack50off_one-2 {
+  height: 162px;
+  background-image: url(../public/images/img_subtract.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 418px;
+  position: relative;
+  align-content: center;
+  padding: var(--space-4xl);
+  @media only screen and (max-width: 1050px) {
+    height: auto;
+  }
+}
+
+.billdetails_one {
+  color: var(--black_900) !important;
+  margin-left: 14px;
+  font-size: 28px !important;
+  align-self: flex-start;
+  @media only screen and (max-width: 1050px) {
+    font-size: 26px !important;
+    margin-left: 0px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 24px !important;
+  }
+}
+
+.rowmrp_one {
+  margin-top: 24px;
+  align-self: stretch;
+}
+
+.row-4 {
+  margin-left: 124px;
+  margin-right: 152px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-5xl);
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.rowproduct {
+  margin-top: 14px;
+  margin-left: 124px;
+  margin-right: 148px;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-5xl);
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.rowlinetwentyni {
+  margin-top: 14px;
+  align-self: stretch;
+}
+
+.rowdelivery {
+  margin-left: 124px;
+  margin-right: 148px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-5xl);
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.rowtotal {
+  margin-top: 24px;
+  margin-left: 124px;
+  margin-right: 144px;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-5xl);
+  @media only screen and (max-width: 1050px) {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.total_one {
+  color: var(--black_900) !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  @media only screen and (max-width: 1050px) {
+    font-size: 26px !important;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 24px !important;
+  }
+}
+
+.price_three {
+  color: var(--black_900) !important;
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  @media only screen and (max-width: 1050px) {
+    font-size: 24px !important;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 22px !important;
+  }
+}
+
+.rowpromo_code {
+  margin-top: 30px;
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-5xl);
+}
+
+.promo_code_can {
+  color: var(--green_300) !important;
+  padding-left: var(--space-5xl);
+  padding-right: var(--space-5xl);
+  font-size: 28px;
+  font-weight: 600;
+  align-self: center;
+  height: 64px;
+  min-width: 726px;
+  border-radius: 20px !important;
+  border: 2px solid var(--green_400) !important;
+  @media only screen and (max-width: 1050px) {
+    font-size: 26px;
+  }
+
+  @media only screen and (max-width: 550px) {
+    font-size: 24px;
+  }
+}
+
+.checkout {
+  color: var(--white_a700) !important;
+  margin-right: 80px;
+  padding-left: 34px;
+  padding-right: 34px;
+  font-size: 21.33px;
+  font-weight: 600;
+  background-color: var(--green_400) !important;
+  height: 54px;
+  min-width: 210px;
+  border-radius: 3px !important;
+  @media only screen and (max-width: 550px) {
+    padding-left: var(--space-5xl);
+    padding-right: var(--space-5xl);
+  }
+}
+
+.footerfooterlog-1 {
+  margin-top: 240px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  display: flex;
+  background-color: var(--green_400);
+  align-self: stretch;
+  align-items: flex-end;
+  @media only screen and (max-width: 1050px) {
+    padding-top: var(--space-5xl);
+    padding-bottom: var(--space-5xl);
+  }
+}
